@@ -30,24 +30,48 @@ about_content: |
   I am most skilled in: <mark>React Native</mark>, <mark>Smart TV Development</mark>, <mark>Cross-Platform Architecture</mark>, and <mark>Frontend Engineering</mark>.
 
 content:
-  - title: Projects
+   - title: Projects
     layout: list
     content:
       - layout: top-middle
-        title: Cross-Platform Mobile & TV App Architecture
+        title: Cross-Platform OTT Streaming App (NDA-Compliant)
+        additional_links:
+          - title: Github Profile
+            icon: fab fa-github
+            url: https://github.com/yourgithub
         quote: >
-          A reusable architecture designed for building scalable apps across mobile and Smart TV platforms.
+          End-to-end OTT application built for multiple mobile, TV, and web platforms.
         description: |
-          This project demonstrates how I architect multi-platform applications using React Native, platform-specific native modules, reusable UI systems, and clean state management.  
-          
-          (Note: Code and assets shared here are generic and do not violate any NDA.)
+          A fully native cross-platform OTT experience developed for iOS, Android, Android TV, Fire TV,
+          webOS, Tizen, tablets, and the web. I handled video playback, EPG, authentication, deep linking,
+          remote navigation, and platform-specific optimizations. All technical details are shared at a
+          high level due to NDA.
 
       - layout: top-middle
-        title: Open-Source Utilities & Components
+        title: Fitness & Wellness Mobile App (Freelance)
         quote: >
-          A collection of reusable tools built to support real-world app development.
+          A modern and user-friendly fitness application built with cross-platform technologies.
         description: |
-          Includes custom hooks, video UI components, Smart TV navigation helpers, and utilities inspired by challenges faced in professional projects.
+          Developed a fitness app featuring workout programs, tracking, scheduling, and real-time sync.
+          Worked closely with product teams to deliver a clean UI and smooth experience on both iOS and Android.
+          Backend and design details remain confidential due to NDA.
+
+      - layout: top-middle
+        title: Accounting & Finance Management App
+        quote: >
+          A multi-module accounting solution built earlier in my career.
+        description: |
+          Helped build core modules including invoicing, reports, data visualization, and secure storage.
+          This project strengthened my foundation in structured data handling and scalable architecture.
+
+      - layout: top-middle
+        title: Smart Device Connected Applications
+        quote: >
+          Apps integrated with IoT and smart hardware ecosystems.
+        description: |
+          Built apps that interact with smart home and IoT devices using Bluetooth, Wi-Fi, and custom APIs.
+          Focused on seamless UX, real-time updates, and stable communication layers.
+
 
   - title: Experience
     layout: list
