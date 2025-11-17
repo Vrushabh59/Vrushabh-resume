@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resume of Vrushabh Dave">
+    <title>Vrushabh Dave - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+
+        .experience-item h3, .education-item h3, .project-item h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .meta {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .experience-item ul, .project-item ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .experience-item li, .project-item li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            background: #f0f0f0;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            color: #555;
+        }
+
+        .certifications ul, .achievements ul {
+            margin-left: 20px;
+        }
+
+        .certifications li, .achievements li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+            }
+
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            header {
+                background: #667eea;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vrushabh Dave</h1>
+            <p>Software Developer</p>
+            <div class="contact-info">
+                <a href="mailto:Vrushabhdave29@gmail.com">📧 Vrushabhdave29@gmail.com</a>
+                <a href="https://github.com/Vrushabh59" target="_blank">💻 GitHub</a>
+                <a href="https://linkedin.com/in/vrushabh-dave" target="_blank">🔗 LinkedIn</a>
+                <span>📍 India</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <section class="summary-section">
+                <h2>Professional Summary</h2>
+                <p class="summary">
+                    Passionate and dedicated software developer with expertise in modern web technologies and software development practices. 
+                    Committed to writing clean, efficient, and maintainable code. Strong problem-solving skills and ability to work 
+                    collaboratively in team environments. Continuously learning and adapting to new technologies and best practices.
+                </p>
+            </section>
+
+            <section class="skills-section">
+                <h2>Technical Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li>JavaScript / TypeScript</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>HTML5 & CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <ul>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>Django / Flask</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>Docker</li>
+                            <li>REST APIs</li>
+                            <li>MongoDB / SQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="experience-section">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <h3>Software Developer</h3>
+                    <p class="meta">Company Name | Location | Month Year - Present</p>
+                    <ul>
+                        <li>Developed and maintained web applications using modern JavaScript frameworks</li>
+                        <li>Collaborated with cross-functional teams to deliver high-quality software solutions</li>
+                        <li>Implemented responsive and user-friendly interfaces following best practices</li>
+                        <li>Participated in code reviews and contributed to improving development processes</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Junior Developer / Intern</h3>
+                    <p class="meta">Company Name | Location | Month Year - Month Year</p>
+                    <ul>
+                        <li>Assisted in the development of web applications and features</li>
+                        <li>Wrote clean, maintainable code following team coding standards</li>
+                        <li>Fixed bugs and improved application performance</li>
+                        <li>Learned and applied new technologies to solve business problems</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="projects-section">
+                <h2>Projects</h2>
+                
+                <div class="project-item">
+                    <h3>Project Name</h3>
+                    <p class="meta">Technologies: React, Node.js, MongoDB</p>
+                    <ul>
+                        <li>Built a full-stack web application with user authentication and data management</li>
+                        <li>Implemented RESTful API endpoints for efficient data operations</li>
+                        <li>Designed and developed responsive UI components</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>Another Project</h3>
+                    <p class="meta">Technologies: Python, Flask, PostgreSQL</p>
+                    <ul>
+                        <li>Created a web application for solving specific business needs</li>
+                        <li>Integrated third-party APIs for enhanced functionality</li>
+                        <li>Deployed application to cloud platform with CI/CD pipeline</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="education-section">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <h3>Bachelor of Technology in Computer Science</h3>
+                    <p class="meta">University Name | Location | Year - Year</p>
+                    <p>Relevant Coursework: Data Structures, Algorithms, Database Management, Web Development, Software Engineering</p>
+                </div>
+            </section>
+
+            <section class="certifications-section">
+                <h2>Certifications</h2>
+                <ul class="certifications">
+                    <li>Certification Name - Issuing Organization (Year)</li>
+                    <li>Another Certification - Issuing Organization (Year)</li>
+                </ul>
+            </section>
+
+            <section class="achievements-section">
+                <h2>Achievements</h2>
+                <ul class="achievements">
+                    <li>Achievement or award description</li>
+                    <li>Another achievement or recognition</li>
+                    <li>Contribution to open-source projects</li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Vrushabh Dave. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
