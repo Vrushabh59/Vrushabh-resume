@@ -33,6 +33,44 @@
           This project strengthened my foundation in structured data handling and scalable architecture.
 
       - layout: top-middle
+        title: Autonomous AI Trading Bot (Personal Project)
+        quote: >
+          A fully decoupled, event-driven algorithmic trading system for low-frequency, high-confidence trades.
+        description: |
+          Designed and documented a master architecture for an autonomous AI trading bot using an event-driven,
+          microservices approach built entirely on n8n workflows, Telegram Pub/Sub channels, Zerodha Kite Connect,
+          and Anthropic Claude Opus 4.6.
+
+          **Core Stack:**
+          - **Orchestration:** n8n (local deployment for zero-latency file system access)
+          - **AI Brain:** Anthropic Claude Opus 4.6 API for market analysis and signal generation
+          - **Broker / Data:** Zerodha Kite Connect API (the sole gateway to the broker)
+          - **Event Bus:** Telegram private channels as a Pub/Sub message broker (3 dedicated channels)
+          - **Journal:** Notion / Google Sheets for immutable trade ledger
+
+          **Architecture Highlights (6 n8n Workflows):**
+          - **Workflow 0 – Risk Manager (Gate 1):** Runs every 15 minutes; reads live M2M PnL from Zerodha
+            and writes a risk-state JSON to disk (`tradingActive`, `requiredConfidence`). Acts as a kill
+            switch at ≥ 5% daily drawdown and throttles confidence thresholds at ≥ 3%.
+          - **Workflow 1 – Zerodha Handler (API Gateway):** The only workflow permitted to talk to the broker.
+            Handles auth-token refresh, OHLCV data fetching (compressed to CSV), and order execution.
+          - **Workflow 2 – AI Agent (The Brain):** Reads the risk-state gate, injects a dynamic strategy prompt
+            (Mean Reversion vs. Momentum), queries Claude Opus 4.6, validates strict JSON output, and publishes
+            signals to Channel A.
+          - **Workflow 3 – Guard Rail (Gate 2):** Listens on Channel A; validates confidence score, position
+            sizing, and stop-loss presence before forwarding approved orders to Channel B.
+          - **Workflow 4 – Trade Journal:** Listens on Channel C; appends execution receipts (ticker, action,
+            strategy_id, price, AI reasoning, status) to the database.
+          - **Workflow 5 – Global Error Catcher:** n8n error-trigger node that sends high-priority Telegram DM
+            alerts with workflow name, node name, and error details for any failure across all workflows.
+
+          **Key Design Decisions:**
+          - Pub/Sub via Telegram eliminates direct webhook coupling between workflows, preventing domino-effect failures.
+          - Dual-gate safety: Risk Manager blocks execution before any API tokens are spent; Guard Rail validates
+            AI output before any order reaches the broker.
+          - API Gateway pattern ensures a single, auditable entry point to Zerodha.
+
+      - layout: top-middle
         title: Smart Device Connected Applications
         quote: >
           Apps integrated with IoT and smart hardware ecosystems.
